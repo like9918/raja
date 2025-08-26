@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '3648073138820855');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3648073138820855&ev=PageView&noscript=1"
+/></noscript>
+    <!-- End Meta Pixel Code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja prediction| 98% Accuracy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #f8b400;
+            --secondary-color: #1a1a2e;
+            --accent-color: #e94560;
+            --text-color: #ffffff;
+            --dark-bg: #0f0f1a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        }
+
+        body {
+            background: linear-gradient(rgba(15, 15, 26, 0.9), rgba(15, 15, 26, 0.9)), var(--bg-image) no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .premium-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(248, 180, 0, 0.4);
+            z-index: 10;
+            animation: pulse 2s infinite;
+        }
+
+        .container {
+            text-align: center;
+            padding: 3rem;
+            max-width: 900px;
+            width: 100%;
+            /* background: rgba(26, 26, 46, 0.8); */
+            /* backdrop-filter: blur(10px); */
+            border-radius: 15px;
+            /*             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); */
+            /*             border: 1px solid rgba(255, 255, 255, 0.1); */
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(248, 180, 0, 0.1) 0%, transparent 70%);
+            animation: rotate 15s linear infinite;
+            z-index: -1;
+        }
+
+        .logo-container {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 0 30px rgba(248, 180, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 0 40px rgba(248, 180, 0, 0.5);
+        }
+
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+            filter: blur(10px);
+            opacity: 0.3;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary-color), #ff9500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .accuracy-badge {
+            display: inline-block;
+            /* background: linear-gradient(45deg, #00b09b, #96c93d); */
+            padding: 8px 20px;
+            /* border-radius: 30px; */
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            /* box-shadow: 0 4px 15px rgba(0, 176, 155, 0.3); */
+        }
+
+        .timer-container {
+            /* background: rgba(15, 15, 26, 0.7); */
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            /* margin-bottom: 2rem; */
+            display: inline-block;
+            /* border: 1px solid rgba(255, 255, 255, 0.1); */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timer-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(248, 180, 0, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .timer-container:hover::before {
+            transform: translateX(100%);
+        }
+
+        .timer {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Digital', sans-serif;
+            background: linear-gradient(45deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .timer-label {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        .guarantee-text {
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--secondary-color);
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+            font-weight: 600;
+            min-width: 220px;
+        }
+
+        .cta-button i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .social-proof {
+            margin-top: 2rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-proof i {
+            color: var(--primary-color);
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+
+        .contact-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                opacity: 0.3;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                opacity: 0.5;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive styles */
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            .logo-glow {
+                width: 150px;
+                height: 150px;
+            }
+            .timer {
+                font-size: 2.8rem;
+            }
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+                min-width: auto;
+            }
+            .container {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .timer {
+                font-size: 2.2rem;
+            }
+            .timer-container {
+                padding: 1rem 1.5rem;
+            }
+            .links-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <img src="logo.jpg" alt="Harshit Cricket Expert Logo" class="logo" id="logo">
+        </div>
+
+        <h1>Raja prediction</h1>
+
+        <div class="social-proof">
+            <i class="fas fa-users"></i> 30,130 subscribers
+        </div>
+
+        <div class="subtitle">Cricket Trading 🚀</div>
+
+        <div class="accuracy-badge">
+            98% Accuracy in market
+        </div>
+
+        <div class="guarantee-text">
+            Meri Gurantee Only 👇<br>
+        </div>
+
+        <div class="links-container">
+            <a href="https://t.me/+Nqd7YfHMwzliOTQ1" class="cta-button" id="mainButton">
+                <i class="fab fa-telegram"></i> JOIN [Raja prediction] CHANNEL
+            </a>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer" id="timer">60</div>
+            <div class="timer-label">Seconds Remaining</div>
+        </div>
+
+    </div>
+
+    <script>
+        // Set random background image from cricket-themed options
+        const bgImages = [
+            'url(https://media.istockphoto.com/id/512735894/photo/stadium.jpg?s=612x612&w=0&k=20&c=8j_rhs6apjSL-JnyJWhOpYKuBSbanKwSJGnzNS627zo=)',
+            'url(https://i.pinimg.com/736x/91/dd/ec/91ddec9c4e86cf4f2c9c86a43af750b1.jpg)',
+            'url(https://static.vecteezy.com/system/resources/thumbnails/051/167/728/small_2x/the-football-stadium-is-empty-during-the-day-clean-grass-no-markings-copy-space-horizontal-format-photo.jpg)',
+            'url(https://t4.ftcdn.net/jpg/08/36/39/93/360_F_836399356_W83kTDajzSuqTKp1wQTIWK2KOGcah37l.jpg)',
+            'url(https://media.istockphoto.com/id/509228106/photo/stadium.jpg?s=612x612&w=0&k=20&c=hT21zPACvEAM4NpIP7V2rUkRZVMh9y8Zgnur9UkPmq0=)'
+        ];
+
+        // Set random background image
+        document.documentElement.style.setProperty('--bg-image', bgImages[Math.floor(Math.random() * bgImages.length)]);
+
+        // Timer functionality
+        let timeLeft = 60;
+        const timerElement = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = "OFFER ENDED!";
+                timerElement.style.background = "linear-gradient(45deg, #e53935, #e35d5b)";
+                timerElement.style.webkitBackgroundClip = "text";
+                timerElement.style.backgroundClip = "text";
+                timerElement.style.color = "transparent";
+            } else if (timeLeft <= 10) {
+                timerElement.style.animation = "pulse 1s infinite";
+                // Change timer container border to red
+                document.querySelector('.timer-container').style.border = "1px solid rgba(229, 57, 53, 0.5)";
+            }
+        }, 1000);
+
+        // Button hover effects
+        const buttons = document.querySelectorAll('.cta-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = "translateY(-5px)";
+                button.style.boxShadow = "0 10px 25px rgba(233, 69, 96, 0.6)";
+            });
+
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = "translateY(0)";
+                button.style.boxShadow = "0 4px 20px rgba(233, 69, 96, 0.4)";
+            });
+        });
+
+        // Random logo border color
+        const logo = document.getElementById('logo');
+        const borderColors = ['#f8b400', '#e94560', '#00b09b', '#1a73e8', '#9c27b0'];
+        logo.style.borderColor = borderColors[Math.floor(Math.random() * borderColors.length)];
+
+        // Animate elements sequentially
+        const animateElements = document.querySelectorAll('h1, .subtitle, .accuracy-badge, .timer-container, .guarantee-text, .links-container, .contact-link, .social-proof');
+
+        animateElements.forEach((el, index) => {
+            el.style.animation = `fadeIn 0.8s ease-in-out ${index * 0.2 + 0.3}s forwards`;
+            el.style.opacity = '0';
+        });
+    </script>
+</body>
+
+
+</html>
